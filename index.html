@@ -3,34 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registration Form</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20250512/pngtree-blue-gradient-soft-background-vector-image_17280771.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .container{
+            width: 320px;
+            background: rgba(255,255,255,0.2);
+            padding: 25px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        }
+
+        .container h1{
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .container input,
+        .container select,
+        .container button{
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        .container input:focus,
+        .container select:focus{
+            border-color: #2575fc;
+            box-shadow: 0 0 5px #2575fc;
+        }
+
+        .radio-group,
+        .checkbox-group{
+            margin: 10px 0;
+            color: white;
+            font-size: 16px;
+        }
+
+        .radio-group input,
+        .checkbox-group input{
+            width: auto;
+            margin-right: 5px;
+        }
+
+        button{
+            background: #2575fc;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            transition: 0.3s;
+        }
+
+        button:hover{
+            background: #6a11cb;
+        }
+
+    </style>
 </head>
 <body>
-    <form action="./login.html">
-    <h1>Registration Form</h1><br>
-    <input type="text" placeholder="Enter name" required><br><br>
-    <input type="email" placeholder="Enter email" required><br><br>
-    <input type="password" placeholder="Enter the password" required><br><br>
-    <input type="password" placeholder="ReEnter the password" required><br><br>
-    <input type="radio" name="gender">Male
-    <input type="radio" name="gender">Female <br><br>
-    <input type="checkbox">10<sup>th</sup>class
-    <input type="checkbox">Inter
-    <input type="checkbox">Diploma
-    <input type="checkbox">B.Tech<br><br>
-    <input type="file"> <br><br>
-    <input type="date">
-    <select>
-        <option value="">Select your city</option>
-        <option value="">Vijayawada</option>
-        <option value="">Hyderabad</option>
-        <option value="">Bangalore</option>
-        <option value="">Chennai</option>
-        <option value="">Mumbai</option>
-    </select>
-    <input type="submit" value="Register">
-    </form>
 
+    <div class="container">
+        <form action="./login.html">
+            <h1>Registration Form</h1>
+
+            <input type="text" placeholder="Enter name" required>
+            <input type="email" placeholder="Enter email" required>
+            <input type="password" placeholder="Enter the password" required>
+            <input type="password" placeholder="Re-enter the password" required>
+
+            <div class="radio-group">
+                <input type="radio" name="gender"> Male
+                <input type="radio" name="gender"> Female
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox"> 10<sup>th</sup> Class
+                <input type="checkbox"> Inter
+                <input type="checkbox"> Diploma
+                <input type="checkbox"> B.Tech
+            </div>
+
+            <input type="file">
+            <input type="date">
+
+            <select>
+                <option value="">Select your city</option>
+                <option>Vijayawada</option>
+                <option>Hyderabad</option>
+                <option>Bangalore</option>
+                <option>Chennai</option>
+                <option>Mumbai</option>
+            </select>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
 
 </body>
 </html>

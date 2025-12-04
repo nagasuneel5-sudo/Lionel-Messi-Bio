@@ -4,16 +4,136 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+     <style>
+        /* Reset */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+            padding: 20px;
+            background: #f5f5f5;
+
+            background: linear-gradient(135deg, #a8e6ff, #ffd6ff, #ffe4b5);
+            background-attachment: fixed;
+        }
+
+        /* Navigation Bar */
+        .navigation{
+            background: black;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navigation a{
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .navigation a:hover{
+            color: yellow;
+        }
+
+        h2{
+            margin-top: 40px;
+            margin-bottom: 10px;
+            font-size: 28px;
+            color: #222;
+        }
+
+        h3{
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        p{
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        /* Table Styling */
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        table th, table td{
+            border: 1px solid #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table th{
+            background: #222;
+            color: white;
+        }
+
+        /* Lists */
+        ul, ol{
+            margin-left: 25px;
+            margin-bottom: 20px;
+        }
+
+        /* Gallery styling */
+        #gallery{
+            margin-top: 40px;
+        }
+
+        img{
+            width: 23%;
+            margin: 1%;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.25);
+            transition: transform 0.3s ease;
+        }
+
+        img:hover{
+            transform: scale(1.05);
+        }
+
+        /* Mobile Responsive */
+        @media(max-width: 768px){
+            img{
+                width: 48%;
+            }
+
+            .navigation a{
+                display: block;
+                margin: 10px 0;
+            }
+        }
+
+        @media(max-width: 480px){
+            img{
+                width: 100%;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <a href="#career" style="margin-right: 20px;">Career</a>
-    <a href="#club-career" style="margin-right: 20px;">Club carrer</a>
-    <a href="#player-profile" style="margin-right: 20px;">Player profile</a>
-    <a href="#personal-life" style="margin-right: 20px;">Personal Life</a>
-    <a href="#career-statistics" style="margin-right: 20px;">Carrer Statistics</a>
-    <a href="#honors" style="margin-right: 20px;">Honors</a>
-    <a href="#gallery" style="margin-right: 20px;">Gallery</a><br><br>
-
+    <nav class="navigation">
+        <a href="#career">Career</a>
+        <a href="#club-career">Club carrer</a>
+        <a href="#player-profile">Player profile</a>
+        <a href="#personal-life">Personal Life</a>
+        <a href="#career-statistics">Carrer Statistics</a>
+        <a href="#honors">Honors</a>
+        <a href="#gallery">Gallery</a><br><br>
+    </nav>
+    
     <h2 id="career">Career</h2>
     <p>
     Lionel Messis football career is one of the most remarkable stories in the history of sports. Born on 24 June 1987 in Rosario, Argentina, Messi showed exceptional talent from a very young age. He joined Newell's Old Boys when he was just six years old and quickly became known for his unbelievable dribbling, close ball control, and natural ability to score goals. Even as a child, he was scoring over 500 goals in youth competitions, which made him stand out as a unique talent. However, Messi faced a major challenge early in life — a growth hormone deficiency. His family struggled with the cost of treatment, but everything changed when FC Barcelona recognized his potential. At the age of 13, Messi and his family moved to Spain after Barcelona offered to cover his medical treatment and bring him into the club's famous academy, La Masia. This move marked the beginning of a legendary journey. Messi progressed rapidly through Barcelonas youth system.
@@ -76,7 +196,7 @@ Messi’s personal life is also marked by his strong commitment to charity and s
 Throughout his life, Messi has remained grounded, respectful, and humble. His personality off the pitch contrasts with his superstar status on it. He values peace, privacy, and family time more than fame or luxury. These qualities have made him not just one of the greatest footballers ever, but also one of the most admired and beloved personalities in the world.</p>
     <h2 id="career-statistics">Carrer Statistics</h2>
     <h3>Club career</h3>
-    <table border="1" cellpadding="8" style="border-collapse: collapse;">
+    <table>
         
         <tr>
             <th>club</th>
@@ -109,7 +229,7 @@ Throughout his life, Messi has remained grounded, respectful, and humble. His pe
     </table>
     <br>
     <h3>international carrer</h3>
-    <table border="1" cellpadding="8" style="border-collapse: collapse;">
+    <table>
         <tr>
             <th>Team</th>
             <th>Years</th>
